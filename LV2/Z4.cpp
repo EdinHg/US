@@ -15,10 +15,11 @@ void ciklus(float t) {
     }
     leds.write(255);
     wait(t);
-    for (int i = 128; i >= 0; i /= 2) {
+    for (int i = 128; i > 0; i /= 2) {
         leds.write(i);
         wait(t);
     }
+    leds.write(0);
 }
 
 void slowCycle() { ciklus(0.5); }
